@@ -185,7 +185,7 @@ table{
   border-bottom: 1px solid black;
   margin-right: 1.5em;
   padding-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 .cart-row{
   display: flex;
@@ -230,6 +230,7 @@ table{
   text-align: center;
   font-size: 1.2em;
   margin-right: 25px;
+
 }
 .cart-row:last-child{
   border-bottom: 1px solid black;
@@ -300,3 +301,87 @@ table{
   cursor: pointer;
 }
 /*shopping cart*/
+
+
+
+/*backend pages */
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid black;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  margin-left: 1px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid cornflowerblue;
+  background: cornflowerblue;
+  text-align: center;
+  color: black;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  height: auto;
+
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 15%;
+  position: absolute;
+  top: 15%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+.sortButton{
+  margin-left: 2px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid cornflowerblue;
+  background: cornflowerblue;
+  text-align: center;
+  color: black;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.btn-AddProduct{
+  align-self: center;
+  color: white;
+  background-color: #6c5b7b ;
+  border: 1px sold black;
+  font-weight: bold;
+  margin: 100px auto 60px auto;
+  font-size: 1.25em;
+  cursor: pointer;
+position: absolute;
+left: 45%;
+}
+.btn-Delete{
+  align-self: left;
+  color: white;
+  background-color: red ;
+  border: 1px sold black;
+  font-weight: bold;
+  margin: 100px auto 60px auto;
+  font-size: 1.25em;
+  cursor: pointer;
+position: fixed;
+left: 15%;
+}
+/*backend pages */
