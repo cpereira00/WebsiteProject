@@ -19,7 +19,7 @@ header ul {
 
 header {
   background-color: cornflowerblue;
-  padding-top: 30px;
+  padding-top: 1%;
   min-width: 70px;
   border-bottom: black 3px solid;
 }
@@ -34,7 +34,7 @@ header a {
 header li {
   float: left;
   display: inline;
-  padding: 0 20px 0 20px;
+  padding: 0 15px 0 15px;
 }
 
 header #branding {
@@ -48,7 +48,7 @@ header #branding h1 {
 
 header nav {
   float: right;
-  margin-top: 15px;
+  margin-top: 5%;
 }
 
 header a:hover {
@@ -68,7 +68,7 @@ header a:hover {
 #showcaseCart {
 
   min-height: 400px;
-  background: url(../img/showcase.jpg);
+  background-color: bisque;
   text-align: left;
   background-size: 100%;
   width: 100%;
