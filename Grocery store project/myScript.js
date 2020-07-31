@@ -124,9 +124,7 @@ function mailList() {
 
 function getUser() {
   var q = location.search.substring(1);
-  var inputs = document.getElementsByTagName("input");
-  var i;
-  inputs[0].value=users[q].fName;
-  inputs[1].value=users[q].lName;
-  inputs[2].value=users[q].email;
+  document.getElementById("firstName").value=users[q].fName;
+  document.getElementById("lastName").value=users[q].lName;
+  document.getElementById("email").value=users[q].email;
 }
