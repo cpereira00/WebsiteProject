@@ -57,20 +57,29 @@
             </tr>
           </table>
         </br>
-          <form>
+          
             <div class="input-group">
-              <input type="number" class="form-control" min="1">
+              <input type="number" class="form-control" min="1" onchange="setPrice()" id="x"> 
               <div class="input-group-btn">
                 <a href="Aisle2.html" class="btn btn-default" role="button" type="submit">
                   <i class="glyphicon glyphicon-shopping-cart"></i></a>
-                </button>
+               
               </div>
             </div>
-        </form>
-     
+        
+      </br>
+     <p id="price">Price: $0</p>
+     <button onclick="moreDet()" type="button" class="btn btn-info" id="more">
+      More Info
+    </button>
+  </br>
+</br>
+      <p id="detail" style="display:none"></p>
       </div> 
     </br>
   </br>
 </body>
-
+<script type="text/javascript">
+  
+</script>
 </html>

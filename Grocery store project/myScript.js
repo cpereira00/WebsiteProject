@@ -97,17 +97,45 @@ var meats =[
   {type:"Salmon", price:11.99, inventory:"10", link:"../Aisle.section/Aisle.images/salmon.jpg"},
   {type:"Sausage", price:6.99, inventory:"42", link:"../Aisle.section/Aisle.images/sausage.jpg"}
 ]
+var detArray = [
+  "A tender piece of chicken.",
+  "Flavourful pork.",
+  "A robust steak.",
+  "Fresh salmon caught daily.",
+  "Sausage made with the finest herbs and spices."]
+ var nums;
+
 function getMeat() {
-  var queryString = location.search.substring(1);
+  var q = location.search.substring(1);
   
   var pic = document.getElementById("pic");
-  pic.src=meats[queryString].link;
+  pic.src=meats[q].link;
   //
   var table = document.getElementById("myTable");
   var rows = table.rows;
-  rows[1].getElementsByTagName("td")[0].innerHTML=meats[queryString].type;
-  rows[2].getElementsByTagName("td")[0].innerHTML=meats[queryString].price;
-  rows[3].getElementsByTagName("td")[0].innerHTML=meats[queryString].inventory;
+  rows[1].getElementsByTagName("td")[0].innerHTML=meats[q].type;
+  rows[2].getElementsByTagName("td")[0].innerHTML=meats[q].price;
+  rows[3].getElementsByTagName("td")[0].innerHTML=meats[q].inventory;
+  //
+  var det = document.getElementById("detail");
+  det.innerHTML = detArray[q];
+  //
+  var inp = document.getElementById("x");
+  x.setAttribute("max",meats[q].inventory);
+  //
+  //x.value=sessionStorage.q;
+  x.value=sessionStorage.getItem("num"+q);
+ setPrice();
+}
+
+function setPrice() {
+  var price = document.getElementById("price");
+  var x = document.getElementById("x");
+  var q = location.search.substring(1);
+  price.innerHTML="Price: $"+x.value*meats[q].price;
+  //sessionStorage.q=x.value;
+  sessionStorage.setItem("num"+q,x.value);
+  
 }
 
 function mailList() {
@@ -126,5 +154,35 @@ function getUser() {
   var q = location.search.substring(1);
   document.getElementById("firstName").value=users[q].fName;
   document.getElementById("lastName").value=users[q].lName;
-  document.getElementById("email").value=users[q].email;
+  document.getElementById("email").value =users[q].email;
+}
+
+
+
+function moreDet() {
+  var x = document.getElementById("detail");
+  var b = document.getElementById("more");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    b.innerHTML="Less Info"
+  } else {
+    x.style.display = "none";
+    b.innerHTML="More Info"
+  }
+}
+
+function showInfo(a){
+    var x = document.getElementsByClassName("infoImg");
+    var info = document.getElementsByClassName("info");
+    x[a].style.animation="fadeout  .5s ease forwards";
+    info[a].style.zIndex = "999";
+
+}
+function hideInfo(a){
+  var x = document.getElementsByClassName("infoImg");
+  var info = document.getElementsByClassName("info");
+  x[a].style.animation="fadein  .5s ease forwards";
+  info[a].style.zIndex = "-1";
+
+
 }
