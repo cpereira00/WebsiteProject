@@ -22,7 +22,8 @@ function getMeat() {
   //
   var table = document.getElementById("myTable");
   var rows = table.rows;
-  rows[1].getElementsByTagName("td")[0].innerHTML=meats[q].type;
+  document.getElementById("head").innerHTML=meats[q].type;
+  //rows[1].getElementsByTagName("td")[0].innerHTML=meats[q].type;
   rows[2].getElementsByTagName("td")[0].innerHTML=meats[q].price;
   rows[3].getElementsByTagName("td")[0].innerHTML=meats[q].inventory;
   //
@@ -34,16 +35,35 @@ function getMeat() {
   //
   //x.value=sessionStorage.q;
   x.value=sessionStorage.getItem("num"+q);
+  size.value=sessionStorage.getItem("size"+q);
  setPrice();
 }
 
 function setPrice() {
   var price = document.getElementById("price");
   var x = document.getElementById("x");
+  var size = document.getElementById("size");
+  var table = document.getElementById("myTable");
+  var rows = table.rows;
   var q = location.search.substring(1);
-  price.innerHTML="Price: $"+x.value*meats[q].price;
+  
+  if (size.value=="Small"){ 
+    price.innerHTML="Price: $"+x.value*meats[q].price;
+    rows[2].getElementsByTagName("td")[0].innerHTML=meats[q].price;
+}
+  if (size.value=="Medium"){ 
+    price.innerHTML="Price: $"+x.value*(meats[q].price+1);
+    rows[2].getElementsByTagName("td")[0].innerHTML=meats[q].price+1;
+}
+  if (size.value=="Large"){ 
+    price.innerHTML="Price: $"+x.value*(meats[q].price+2);
+    rows[2].getElementsByTagName("td")[0].innerHTML=meats[q].price+2;
+}
+  
+ 
   //sessionStorage.q=x.value;
   sessionStorage.setItem("num"+q,x.value);
+  sessionStorage.setItem("size"+q,size.value);
   
 }
 
