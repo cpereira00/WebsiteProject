@@ -33,19 +33,24 @@
 
 
 <body style="background-color: bisque;" onload="getMeat()">
-    <div class = "sign-in">
-        <h>Product Description</h>
+    <div class = "description">
+        <h1 id="head">Product Description</h1>
           <img id="pic" src="#">
     </br></br>
-  
-          <table id="myTable" class="table table-bordered table-condensed table-hover table-center">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+          <table id="myTable" class="table table-hover table-center">
             <tr>
               <th></th>
-              <th>Info</th>
+              <th>Info      </th>
             </tr>
             <tr>
-              <th>Type</th>
-              <td></td>
+              <th>Size</th>
+              <td><select class="form-control" id="size" onchange="setPrice()">
+                <option selected>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select></td>
             </tr>
             <tr>
               <th>Price</th>
@@ -56,14 +61,16 @@
               <td></td>
             </tr>
           </table>
+        </div>
+          <div class="col-sm-1"></div>
         </br>
-          
-            <div class="input-group">
+            <div class="col-sm-4"></div>
+            <div class="input-group col-sm-4">
               <input type="number" class="form-control" min="1" onchange="setPrice()" id="x"> 
               <div class="input-group-btn">
                 <a href="Aisle2.html" class="btn btn-default" role="button" type="submit">
                   <i class="glyphicon glyphicon-shopping-cart"></i></a>
-               
+                  <div class="col-sm-4"></div>
               </div>
             </div>
         

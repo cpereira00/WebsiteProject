@@ -165,7 +165,7 @@ table{
 }
 .table {
   margin: auto;
-  width: 50% !important; 
+  width: 100% !important; 
 }
 input[type="Phone"] {
   border-radius: 20px;
@@ -217,3 +217,16 @@ a.aInfo:hover {
   }
 }
 
+
+.description{
+  width: 400px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background: white;
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+}
+
+#myTable th, td {
+  text-align: center;
+}
