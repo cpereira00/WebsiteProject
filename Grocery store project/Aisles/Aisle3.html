@@ -63,6 +63,26 @@
         
       </ul></div>
     </div>
+	
+	<script>
+function Filter() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+	
 	<section>
     <footer>
       <p> At Market To-Go we want to build relationships with our customers, we want to offer the best service out there at a competitive price, to do so we need you to sign up for our newsletter. By signing up you will receive weekly
