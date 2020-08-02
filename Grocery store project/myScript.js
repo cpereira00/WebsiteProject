@@ -23,18 +23,17 @@ function getMeat() {
   var table = document.getElementById("myTable");
   var rows = table.rows;
   document.getElementById("head").innerHTML=meats[q].type;
-  //rows[1].getElementsByTagName("td")[0].innerHTML=meats[q].type;
-  rows[2].getElementsByTagName("td")[0].innerHTML=meats[q].price;
+  
   rows[3].getElementsByTagName("td")[0].innerHTML=meats[q].inventory;
   //
   var det = document.getElementById("detail");
   det.innerHTML = detArray[q];
   //
   var inp = document.getElementById("x");
-  x.setAttribute("max",meats[q].inventory);
+  inp.setAttribute("max",meats[q].inventory);
   //
   //x.value=sessionStorage.q;
-  x.value=sessionStorage.getItem("num"+q);
+  inp.value=sessionStorage.getItem("num"+q);
   size.value=sessionStorage.getItem("size"+q);
  setPrice();
 }
