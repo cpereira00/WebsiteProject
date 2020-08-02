@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MarketToGo</title>
+  <meta name="viewport" content="width = device-width, initial-scale=1"> </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../myScript.js"></script>
+
+  <header>
+    <div class="row">
+      
+    <div class="container">
+      <div id="branding">
+        <img class="logo" src="../img/logo.jpg">
+      </div>
+      <nav>
+        <div class="container-fluid">
+        <ul>
+          <li><a href="../index.html"> Home </a> </li>
+          <li><a href = "Aisle.html"> Aisle </a> </li>
+          <li><a href="../My%20Cart.html"> My Cart </a> </li>
+          <li><a href="../Login.html"> Login </a> </li>
+          <li><a href="../Sign%20up.html"> Sign up </a> </li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  </header>
+
+
+<body style="background-color: bisque;" onload="getMeat()">
+    <div class = "description">
+        <h1 id="head">Product Description</h1>
+          <img id="pic" src="#">
+    </br></br>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+          <table id="myTable" class="table table-hover table-center">
+            <tr>
+              <th></th>
+              <th>Info      </th>
+            </tr>
+            <tr>
+              <th>Size</th>
+              <td><select class="form-control" id="size" onchange="setPrice()">
+                <option selected>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select></td>
+            </tr>
+            <tr>
+              <th>Price</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Inventory</th>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+          <div class="col-sm-1"></div>
+        </br>
+            <div class="col-sm-4"></div>
+            <div class="input-group col-sm-4">
+              <input type="number" class="form-control" min="1" onchange="setPrice()" id="x"> 
+              <div class="input-group-btn">
+                <a href="Aisle2.html" class="btn btn-default" role="button" type="submit">
+                  <i class="glyphicon glyphicon-shopping-cart"></i></a>
+                  <div class="col-sm-4"></div>
+              </div>
+            </div>
+        
+      </br>
+     <p id="price">Price: $0</p>
+     <button onclick="moreDet()" type="button" class="btn btn-info" id="more">
+      More Info
+    </button>
+  </br>
+</br>
+      <p id="detail" style="display:none"></p>
+      </div> 
+    </br>
+  </br>
+</body>
+<script type="text/javascript">
+  
+</script>
+</html>

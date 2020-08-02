@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Market To-Go</title>
+  <meta name="viewport" content="width = device-width"> </head>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <header>
+    <div class="container">
+      <div id="branding">
+		<a href="../index.html">
+			<img class="logo" src="../img/logo.jpg">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html"> Home </a> </li>
+          <li><a href = "Aisle.html"> Aisle </a> </li>
+          <li><a href="../My%20Cart.html"> My Cart </a> </li>
+          <li><a href="../Login.html"> Login </a> </li>
+          <li><a href="../Sign%20up.html"> Sign up </a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+<body class = "bor" style="background-color: bisque;">
+  <p>For more information on the products, please click on the images</p>
+	<p>Search</p>
+	
+  <div class="row">
+    <div class="col-sm-6">
+	<input type="text" id="myInput" onkeyup="Filter()" placeholder="Search for items..." title="Type in an item">
+	<ul id="myUL">
+  		<li><a href="Aisle.section/Aisle.page/apples.html">Apple</a><img src="Aisle.section/Aisle.images/apples.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Avocado</a><img src="Aisle.section/Aisle.images/avocado.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Banana</a><img src="Aisle.section/Aisle.images/banana.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Broccoli</a><img src="Aisle.section/Aisle.images/broccoli.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Cucumber</a><img src="Aisle.section/Aisle.images/cucumber.jpg"></li>
+ 		<li><a href="Aisle.section/Aisle.page/avocado.html">Eggplant</a><img src="Aisle.section/Aisle.images/eggplant.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Kiwi</a><img src="Aisle.section/Aisle.images/kiwi.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Lettuce</a><img src="Aisle.section/Aisle.images/lettuce.jpg"></li>
+ 		<li><a href="Aisle.section/Aisle.page/avocado.html">Mango</a><img src="Aisle.section/Aisle.images/mango.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Onion</a><img src="Aisle.section/Aisle.images/onion.jpg"></li>  
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Orange</a><img src="Aisle.section/Aisle.images/orange.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Papaya</a><img src="Aisle.section/Aisle.images/papaya.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Pineapple</a><img src="Aisle.section/Aisle.images/pineapple.jpg"></li>  
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Potato</a><img src="Aisle.section/Aisle.images/potato.jpg"></li>
+  		<li><a href="Aisle.section/Aisle.page/avocado.html">Strawberry</a><img src="Aisle.section/Aisle.images/strawberry.jpg"></li>
+	</ul>
+	  </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+      <ul class="pagination">
+        <li><a href="Aisle.html">1</a></li>
+        <li><a href="Aisle2.html">2</a></li>
+        <li class="active"><a href="Aisle3.html">3</a></li>
+        <li><a href="#">4</a></li>
+        
+      </ul></div>
+    </div>
+	
+	<script>
+function Filter() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+	
+	<section>
+    <footer>
+      <p> At Market To-Go we want to build relationships with our customers, we want to offer the best service out there at a competitive price, to do so we need you to sign up for our newsletter. By signing up you will receive weekly
+        emails and coupons so you can get the best price and the best service. </p>
+      <form>
+        <p> Market To-Go, Copyright &copy; 2020</p>
+      </form>
+    </footer>
+	</section>
+</body>
+</html>

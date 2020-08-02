@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> Bread &amp; Butter Grocers </title>
+  <meta name="viewport" content="width = device-width" </head>
+ <link rel="stylesheet" href="style.css">
+ <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+ <header>
+
+  <div class="container">
+    <div id="branding">
+      <h1>Bread &amp; Butter Grocers </h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Home </a> </li>
+        <li><a href = "Aisle.html"> Aisle </a> </li>
+        <li><a href="My%20Cart.html"> MY CART <i class='fas fa-shopping-cart'></i> </a> </li>
+        <li><a href="Login.html"> Login </a> </li>
+        <li><a href="Sign%20up.html"> Sign up </a> </li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+  <h1>
+  <p> Product List</p>
+  <div class="wrap">
+  <div class="search">
+    <input type="text" class="searchTerm" placeholder="Search Products...">
+    <button type="submit" class="searchButton"> <i class="fa fa-search"></i>
+   </button>
+ </div>
+</div>
+</h1>
+<body>
+
+  <section id="showcaseCart">
+      <div class="container">
+  <div class="cart-row">
+ <span class="cart-item cart-header cart-column">Item <button type="button" class="sortButton"> <i class="fa fa-sort"></i> </button></span>
+
+ <span class= "cart-price cart-header cart-column">Price <button type="button" class="sortButton"> <i class="fa fa-sort"></i> </button></span>
+
+ <span class="cart-type cart-header cart-column">Type </span>
+
+ <span class="cart-quantity cart-header cart-column">Inventory <button type="button" class="sortButton"> <i class="fa fa-sort"></i> </button></span>
+
+
+</div>
+<div class="cart-items">
+<div class="cart-row">
+<div class="cart-item cart-column">
+    <div class="cart-type">
+      <span>
+      <form action="/action_page.php" method="get">
+      <input type="radio" >
+      </form>
+      </span>
+<img class="cart-item-image"
+<img src=".png" width="100" height="100">
+<span class="cart-item-title">cucumbers</span>
+</div>
+  </div>
+<!--add javascript func to have x in stock-->
+<span class= "cart-price cart-column">$9.99</span>
+
+<span class= "cart-type cart-column">Fruit</span>
+
+<div class="cart-quantity cart-column"> in stock
+
+
+</div>
+</div>
+<!-- need to add img src -->
+<div class="cart-row">
+<div class="cart-item cart-column">
+    <div class="cart-type">
+      <span>
+      <form action="/action_page.php" method="get">
+      <input type="radio" >
+      </form>
+      </span>
+<img class="cart-item-image"
+<img src=".png" width="100" height="100">
+<span class="cart-item-title">Imported Bananas</span>
+</div>
+
+</div>
+<span class= "cart-price cart-column">$3.99</span>
+<span class= "cart-type cart-column">Fruit</span>
+<div class="cart-quantity cart-column"> in stock
+
+
+  </div>
+  </div>
+  </div>
+
+
+<button class="btn btn-primary btn-AddProduct" type="button">Add Product/Edit Item</button>
+<button class="btn btn-primary btn-Delete" type="button">Delete Item</button>
+  </div>
+</section>
+
+</body>
+
+
+
+    </html>
