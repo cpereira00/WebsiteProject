@@ -34,7 +34,7 @@ header a {
 header li {
   float: left;
   display: inline;
-  padding: 0 20px 0 20px;
+  padding: 0 15px 0 15px;
 }
 
 header #branding {
@@ -48,7 +48,7 @@ header #branding h1 {
 
 header nav {
   float: right;
-  margin-top: 15px;
+  padding-top: 5%;
 }
 
 header a:hover {
@@ -165,6 +165,13 @@ img{
   width : 190px;
   height: 190px;
   border-radius: 50%;
+
+}
+img.logo{
+  width : 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding-bottom: 5%;
 
 }
 table{
