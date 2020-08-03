@@ -39,8 +39,44 @@ function quantityChanged(event){
     input.value =1
   }
   updateCartTotal()
+  updateQSTTotal()
+  updateGSTTotal()
 }
+//QST update calculation function
+function updateQSTTotal(){
+  var cartItemContainer = document.getElementsByClassName("cart-items")[0]
+var cartRows= cartItemContainer.getElementsByClassName("cart-row")
+var total=0
+for (var i=0; i< cartRows.length; i++) {
+  var cartRow=cartRows[i]
+  var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+  var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')
+  [0]
+    var price = parseFloat(priceElement.innerText.replace('$', ''))
+    var quantity = quantityElement.value
+    total=total+(.0997*(price*quantity))
+  }
+total=Math.round(total*100)/100
+  document.getElementsByClassName("cart-QST-price")[0].innerText='$'+ total
+}
+//gst update calculation function
+function updateGSTTotal(){
+  var cartItemContainer = document.getElementsByClassName("cart-items")[0]
+var cartRows= cartItemContainer.getElementsByClassName("cart-row")
+var total=0
+for (var i=0; i< cartRows.length; i++) {
+  var cartRow=cartRows[i]
+  var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+  var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')
+  [0]
+    var price = parseFloat(priceElement.innerText.replace('$', ''))
+    var quantity = quantityElement.value
+    total=total+(.05*(price*quantity))
+  }
+total=Math.round(total*100)/100
+  document.getElementsByClassName("cart-GST-price")[0].innerText='$'+ total
 
+}
 //total price function
 function updateCartTotal() {
   var cartItemContainer = document.getElementsByClassName("cart-items")[0]
@@ -53,7 +89,7 @@ for (var i=0; i< cartRows.length; i++) {
   [0]
     var price = parseFloat(priceElement.innerText.replace('$', ''))
     var quantity = quantityElement.value
-    total=total+(price * quantity)
+    total=total+(price * quantity)+(.05*(price*quantity))+(.0997*(price*quantity))
   }
 total=Math.round(total*100)/100
   document.getElementsByClassName("cart-total-price")[0].innerText='$'+ total
