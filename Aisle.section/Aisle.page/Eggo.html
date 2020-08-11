@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+  <script src = "../../ErikJavaScript.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title> Bread &amp; Butter Grocers </title>
+  <meta name="viewport" content="width = device-width"> </head>
+  <link rel="stylesheet" href="../../Erikstyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <header>
+    <div class="container">
+      <div id="branding">
+        <img class="logo" src="../../img/logo.jpg">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../../index.html"> Home </a> </li>
+          <li><a href = "../../Aisles/Aisle.html"> Aisle </a> </li>
+          <li><a href="../../My%20Cart.html"> My Cart </a> </li>
+          <li><a href="../../Login.html"> Login </a> </li>
+          <li><a href="../../Sign%20up.html"> Sign up </a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body class = "Sup" onload="setValues(1)">
+    <div class = "sign-in">
+        <h>Box of Original Eggos</h>
+        <img src="../Aisle.images/Eggo.jpg">
+
+        <table class = "itemDetails">
+          <tr>
+            <td>Quantity</td>
+            <td> Price </td>
+            <td> Total Price</td>
+          </tr>
+          <tr>
+            <td><input type="number" onchange = "calc(1)" id= "quantity" min="1" max ="500"></td>
+            <td><div id = "itemPrice">2.99</div></td>
+            <td><div id= "totalPrice"> </div></td>
+        </table>
+              <div>
+                    <button onclick="window.location.href='../../Aisles/Aisle.html';"> Add to cart </button>
+              </div>
+              <div>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+                <p>Quick & Convenient, Eggo Products Can Go From Freezer To Plate In Just A Few Minutes<span id="dots">...</span>
+                  <span id="more">Learn About Nutrition. Too Delicious To Share. See Our Brands. Nutritious & Delicious. Find Recipes. Source Of Fibre. Breakfast for Better Days. Brands: Special K™, Froot Loops™.</span></p>
+              </div>
+    </div>
+  </body>
+</html>
