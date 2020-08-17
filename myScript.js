@@ -110,13 +110,13 @@ function hideInfo(a){
 
 
 }
-var users = [
+/*var users = [
   {fName:"James", lName:"Elman", email:"james@elman.org"},
   {fName:"Erik", lName:"Perez", email:"erik@perez.org"},
   {fName:"Chris", lName:"Pereira", email:"chris@pereira.org"},
   {fName:"Krishnna", lName:"Shan", email:"krishnna@shan.org"}
-];
-function fillTable() {
+];*/
+/*function fillTable() {
  table= document.getElementById("myTable");
   var i;
   
@@ -143,7 +143,7 @@ function fillTable() {
      cell3.appendChild(edit);
      
   }
-}
+}*/
 
 
 function sortTable() { 
